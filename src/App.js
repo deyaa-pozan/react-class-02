@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import data from "./components/data.json";
 import SelectedBeast from "./components/SelectedBeast";
+
+
 class App extends React.Component {
 
   constructor(props) {
@@ -37,6 +39,12 @@ class App extends React.Component {
   render() {
     return (
     <div>
+      <Header />
+      <Main 
+      data={data}
+      updateVisible={this.updateVisible}
+      modalData={this.modalData}
+      />
       <SelectedBeast
           visible={this.state.visible}
           title={this.state.title}
@@ -44,16 +52,10 @@ class App extends React.Component {
           des={this.state.des}
           count={this.state.count}
           updateVisible={this.updateVisible}
-      modalData={this.modalData}
+          modalData={this.modalData}
 
           
         />
-      <Header />
-      <Main 
-      data={data}
-      updateVisible={this.updateVisible}
-      modalData={this.modalData}
-      />
       <Footer/>
     </div>
     );
