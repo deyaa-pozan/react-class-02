@@ -20,7 +20,6 @@ cardView =() =>{
     this.props.des,
     this.props.url,
     this.state.count,
-
   );
 }
 CounterPlus = () => {
